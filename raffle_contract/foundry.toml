@@ -1,0 +1,24 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings = ["@chainlink/contracts/=lib/chainlink-brownie-contracts/contracts/", 
+ "@solmate/=lib/solmate/src/" ]
+fs_permissions = [
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
+
+[fuzz]
+runs=143
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+# Welcome to Chainlink VRF!
+# We require a signature in order to ensure you are the owner of the subscription.
+# Wallet address:
+# 0x958380077a987e1938c37531de8a5cddced329a6
+# VRF Coordinator address:
+# 0x9ddfaca8183c41ad55329bdeed9f6a8d53168b1b
+# Subscription ID:
+# 4109463507368075439185070617858064503407636344239896953845368839007968509247
+
